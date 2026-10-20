@@ -1,0 +1,11 @@
+:HL["/_next/static/chunks/2nvlfapoufds_.css","style"]
+:HL["/_next/static/media/54fc36028e2bb174-s.p.20jfceqj9zyw9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/66b33cc02d8f8b9d-s.p.3slq8sz4zhb1g.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/6b186f06197624ff-s.p.171shbaxyastj.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/a85fe84266768609-s.p.0h6ig86gwutp4.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/chunks/2eya-ljmmh89c.css","style"]
+4:[["children",{"s":"__PAGE__","h":160}]]
+3:[["children",{"s":"changelog","h":96,"c":"$Q4"}]]
+2:[["children",{"s":"it","h":96,"c":"$Q3"}]]
+1:[["children",{"s":"(it)","h":112,"c":"$Q2"}]]
+0:{"b":"1JgREUJB1_Suwn4e9C0xG","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
