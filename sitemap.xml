@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+<loc>https://oblada-browser.github.io/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://oblada-browser.github.io/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://oblada-browser.github.io/it/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://oblada-browser.github.io/" />
+</url>
+<url>
+<loc>https://oblada-browser.github.io/it/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://oblada-browser.github.io/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://oblada-browser.github.io/it/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://oblada-browser.github.io/" />
+</url>
+<url>
+<loc>https://oblada-browser.github.io/changelog/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://oblada-browser.github.io/changelog/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://oblada-browser.github.io/it/changelog/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://oblada-browser.github.io/changelog/" />
+<lastmod>2026-10-21</lastmod>
+</url>
+<url>
+<loc>https://oblada-browser.github.io/it/changelog/</loc>
+<xhtml:link rel="alternate" hreflang="en" href="https://oblada-browser.github.io/changelog/" />
+<xhtml:link rel="alternate" hreflang="it" href="https://oblada-browser.github.io/it/changelog/" />
+<xhtml:link rel="alternate" hreflang="x-default" href="https://oblada-browser.github.io/changelog/" />
+<lastmod>2026-10-21</lastmod>
+</url>
+</urlset>

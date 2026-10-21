@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://oblada-browser.github.io/sitemap.xml
