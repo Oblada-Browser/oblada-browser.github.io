@@ -4,7 +4,7 @@
 
 Oblada is a web browser with Zen's sidebar, Firefox's containers, and add-ons from both the Chrome and Firefox stores. Built on Chromium, named after a fish. Oblada is in beta: free, open source, and for now on Macs with Apple Silicon. Linux builds are coming soon, then Windows.
 
-- Latest version: 0.3.1, released 2026-10-22, based on Chromium 156.0.8078.48
+- Latest version: 0.3.2, released 2026-10-23, based on Chromium 156.0.8078.48
 - Download for Mac (Apple Silicon): https://github.com/Oblada-Browser/oblada/releases/latest/download/Oblada-silicon.dmg
 - Source code (GPL-3.0): https://github.com/Oblada-Browser/oblada
 
@@ -35,23 +35,15 @@ If macOS says the app is damaged, run this in Terminal instead:
 xattr -dr com.apple.quarantine /Applications/Oblada.app
 ```
 
-## What's new in 0.3.1
+## What's new in 0.3.2
 
 ### Changed
 
-- When Oblada reopens your last session, tabs load when you open them, so it starts faster. Pinned tabs, and tabs that work in the background such as chats and mail, still load right away.
-- Memory Saver is on: tabs left alone for a while are unloaded to free memory, and reload when you open them. Settings > Performance can turn it off.
-- Large downloads come over several connections at once, where the site allows it, so they finish sooner.
-- Live Caption's speech recognition and Read aloud's voices are downloaded only when you use them, and large components no longer keep a second copy of themselves, which could take hundreds of MB.
-
-### Removed
-
-- History no longer groups your visits by topic, which worked in the background as pages loaded.
-- Oblada no longer measures every page's CPU and memory every two minutes, for statistics it never sent.
+- Oblada is now built with the optimizations Chrome is built with, tuned on how the browser really runs: web pages and apps respond faster, scoring about 40% higher on the Speedometer benchmark. Oblada also takes about 200 MB less on disk, and 25 MB less to download.
 
 ### Fixed
 
-- A container tab unloaded to free memory, or by an extension, reloads in its container, and a temporary container's data is no longer erased when its last tab is unloaded.
+- Oblada no longer crashes when a tab opened as it starts, such as a link that opened Oblada, goes to another page.
 
 ## Pages
 
