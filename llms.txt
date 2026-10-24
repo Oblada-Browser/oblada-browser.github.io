@@ -4,7 +4,7 @@
 
 Oblada is a web browser with Zen's sidebar, Firefox's containers, and add-ons from both the Chrome and Firefox stores. Built on Chromium, named after a fish. Oblada is in beta: free, open source, and for now on Macs with Apple Silicon. Linux builds are coming soon, then Windows.
 
-- Latest version: 0.4.0, released 2026-10-23, based on Chromium 156.0.8078.48
+- Latest version: 0.4.1, released 2026-10-24, based on Chromium 156.0.8078.48
 - Download for Mac (Apple Silicon): https://github.com/Oblada-Browser/oblada/releases/latest/download/Oblada-silicon.dmg
 - Source code (GPL-3.0): https://github.com/Oblada-Browser/oblada
 
@@ -35,25 +35,11 @@ If macOS says the app is damaged, run this in Terminal instead:
 xattr -dr com.apple.quarantine /Applications/Oblada.app
 ```
 
-## What's new in 0.4.0
-
-### Added
-
-- Four new window layouts, for seven in all: pick one in Settings > Oblada, in the menu's Window layout or in the welcome.
-- Expanded scaffold: the address bar at the top, as in Scaffold, and the full sidebar below it, with the tabs' titles and the workspaces. ⌘⇧L turns it into Scaffold and back.
-- Horizon: the address bar in the middle at the top, and the tabs sharing a row below it, as in Safari.
-- Horizon compact: a single row, where the active tab is the address bar, which floats over the page as you type.
-- Classic: the tabs in a row at the top, the address bar below them.
-- With the tabs at the top, they're as plain as the sidebar's and take little room, and the workspace shown is a pill before them: click it to switch workspace or make a new one, or swipe across the tabs. Hold the + down to open a tab in a container, as in the sidebar.
+## What's new in 0.4.1
 
 ### Changed
 
-- The welcome lists the window layouts by where the tabs are, and shows the one picked, or the one under the pointer, at work next to the list.
-
-### Fixed
-
-- The welcome and the New Tab page no longer turn opaque when reloaded.
-- Extensions opened from the site panel show their popups under it, rather than at the top left of the window, in the Scaffold layouts.
+- The sidebar shows the reload button next to back and forward when it's wide enough for it; in a narrower one, Reload is in the ⋯ menu, as before.
 
 ## Pages
 
