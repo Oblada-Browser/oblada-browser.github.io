@@ -1,10 +1,10 @@
 # Oblada
 
-> Now in beta: a Chromium web browser with Zen's sidebar, Firefox's containers, and add-ons from both the Chrome Web Store and Firefox Add-ons.
+> Now in beta: a Chromium web browser with Zen's sidebar, Firefox's containers, Brave's protection from trackers, and add-ons from both the Chrome Web Store and Firefox Add-ons.
 
-Oblada is a web browser with Zen's sidebar, Firefox's containers, and add-ons from both the Chrome and Firefox stores. Built on Chromium, named after a fish. Oblada is in beta: free, open source, and for now on Macs with Apple Silicon. Linux builds are coming soon, then Windows.
+Oblada is a web browser with Zen's sidebar, Firefox's containers, Brave's protection from trackers, and add-ons from both the Chrome and Firefox stores. Built on Chromium, named after a fish. Oblada is in beta: free, open source, and for now on Macs with Apple Silicon. Linux builds are coming soon, then Windows.
 
-- Latest version: 0.4.2, released 2026-10-26, based on Chromium 156.0.8078.48
+- Latest version: 0.5.0, released 2026-10-27, based on Chromium 156.0.8078.48
 - Download for Mac (Apple Silicon): https://github.com/Oblada-Browser/oblada/releases/latest/download/Oblada-silicon.dmg
 - Source code (GPL-3.0): https://github.com/Oblada-Browser/oblada
 
@@ -15,11 +15,28 @@ Oblada is a web browser with Zen's sidebar, Firefox's containers, and add-ons fr
 - **Two pages, one window.** Drag a tab onto the page to split the view. Drag the handle to swap sides, or onto the sidebar to separate them again.
 - **An address bar that floats.** Press ⌘L and the address bar rises over the page like a buoy, with its suggestions right under it. Pick one and it drifts back to the sidebar.
 - **Compact mode.** Hide the sidebar and the page gets the whole window. Reach for the left edge and the sidebar slides back in.
+- **Window layouts.** Tabs down the side or along the top, the address bar wherever suits you: Oblada has seven window layouts. Pick one the first time you open it, and change it whenever you like, from the menu's Window layout or Settings › Oblada.
+  - Sidebar (tabs on the side): Tabs, address bar and workspaces on the side
+  - Scaffold (tabs on the side): Tabs as icons, the address bar on top
+  - Expanded scaffold (tabs on the side): The full sidebar, the address bar on top
+  - Compact (tabs on the side): Only the page: the sidebar shows from the left edge
+  - Horizon (tabs at the top): The address bar on top, the tabs below it
+  - Horizon compact (tabs at the top): One row: the active tab is the address bar
+  - Classic (tabs at the top): The tabs on top, the address bar below them
 - **Containers.** Each container keeps its own cookies, logins and site data. Open the same site in two containers and use two accounts side by side, with nothing seeping from one to the other. Eight colors, the same as Firefox's.
 - **Temporary containers.** For one-off visits. Nothing is written to disk, and when the last tab closes the container pops, data and all.
 - **Add-ons from two seas.** Install from the Chrome Web Store as usual, or straight from Firefox Add-ons: Oblada converts the .xpi while it installs. Firefox's contextualIdentities API comes along too, so add-ons like Multi-Account Containers work with Oblada's containers.
+- **Protection from trackers.** The Barrier brings Brave's Shields to Oblada, on by default: it blocks trackers and ads, shows every site a slightly different you, and forgets what third parties leave behind.
+  - **Trackers and ads, blocked.** With Brave's engine and the lists it uses: EasyList, EasyPrivacy, uBlock Origin's and Brave's own. The empty boxes they leave behind, cookie notices and anti-adblock walls go too.
+  - **Third parties forget.** Their cookies are blocked, and what they store on a site is erased once you close it. Any site can be forgotten when you close it, too.
+  - **Site by site.** Turn the Barrier off where a site breaks, block harder where it doesn't, block scripts: right from the address bar.
+  - **A different you on every site.** Sites that fingerprint you read your canvas, audio, fonts, screen and processor. The Barrier changes them slightly: the same on a site until Oblada restarts, different on every other site and in every container.
+  - **Links without the hooks.** Sites hang parameters on links to know who followed them. Oblada cuts them off the addresses you open, and skips tracking redirects and AMP pages for the real page.
+  - And also: Global Privacy Control; HTTPS wherever it works; Trackers hiding behind a site's own addresses; Sensitive sites in a temporary container; A question before Google sign-in on other sites; Block any element; Your own filters and lists; Web APIs that mostly track you, off; A red switch that turns it all off.
 
 Oblada's sidebar, workspaces, compact mode and split view follow the design of Zen Browser, an open-source browser built on Firefox by a small team. If you like how Oblada feels, thank the people who thought of it first.
+
+The Barrier stands on Brave’s work: its adblock-rust engine, its lists, and its way of blurring fingerprints. Thank you, Brave.
 
 ## Installing
 
@@ -35,16 +52,36 @@ If macOS says the app is damaged, run this in Terminal instead:
 xattr -dr com.apple.quarantine /Applications/Oblada.app
 ```
 
-## What's new in 0.4.2
+## What's new in 0.5.0
+
+### Added
+
+- The Barrier: Oblada now blocks trackers and ads with Brave's engine and its lists (EasyList, EasyPrivacy, uBlock Origin's, Brave's), including the elements they leave on pages, cookie notices and the scripts that fight ad blockers.
+- The Barrier's button at the end of the address bar shows how many trackers and ads it blocked on the page, and opens its controls for the site: turn it off for the site, block aggressively, upgrade to HTTPS strictly or not at all, block scripts, fingerprinting, cookies, forget the site when you close it. In the sidebar layouts, the controls are at the top of the site panel.
+- Fingerprinting protection: sites see slight changes to canvas and audio readouts, to your processor, memory, screen size, fonts and speech voices, and generic GPU names, the same on a site until Oblada restarts but different from site to site and from container to container, so they can't follow you around. It reaches sites' workers too, and limits how many connections a site keeps open.
+- Third parties' cookies are blocked, and what they store on a site is erased once you close it. Sites can be set to be forgotten when you close them.
+- Tracking parameters (fbclid, gclid…) are removed from the addresses you open, tracking redirects are skipped for where they lead, and AMP pages, on Google's cache or the sites' own, for the original.
+- Trackers hiding behind a site's own addresses (CNAME cloaking) are blocked too.
+- Global Privacy Control asks sites not to sell or share your data.
+- Sensitive sites, like those that help against domestic violence, can open in a temporary container, which keeps nothing once you close it: Oblada asks first.
+- Before a site lets you sign in with Google in a way that needs Google's cookies on that site, Oblada asks.
+- With aggressive blocking, Oblada warns before opening a tracker's address as a page.
+- Block an element: pick anything on a page to hide it for good, from the Barrier's controls or the page's context menu.
+- Settings > Oblada has the Barrier's defaults, its privacy settings (languages sites see, WebRTC's IP addresses, social media embeds, Do Not Track…), its filter lists, your own filters and lists from an address, and the sites with settings of their own.
+- A DANGEROUS switch in Settings > Oblada turns all of the Barrier off.
+
+### Changed
+
+- Web APIs that mostly serve to recognize you are off, as in Brave: Web Bluetooth, Web Serial, opening local files and folders from pages, FedCM, the Reporting API and others. Referrers never say more than the site across sites, and cookies last 6 months at most.
 
 ### Fixed
 
-- The sidebar keeps its width when Oblada restarts, instead of opening at its default width again.
+- Tabs restored at startup no longer load in the background before you open them, except those of sites known to work in the background.
 
 ## Pages
 
 - [Oblada](https://oblada-browser.github.io/): the home page, a tour of the browser
-- [Changelog](https://oblada-browser.github.io/changelog/): What's new in each release of Oblada, the Chromium web browser with Zen's sidebar, Firefox's containers and add-ons from both stores.
+- [Changelog](https://oblada-browser.github.io/changelog/): What's new in each release of Oblada, the Chromium web browser with Zen's sidebar, Firefox's containers, Brave's protection from trackers and add-ons from both stores.
 - [Oblada in Italian](https://oblada-browser.github.io/it/) and [its changelog](https://oblada-browser.github.io/it/changelog/)
 
 ## Optional
@@ -52,3 +89,4 @@ xattr -dr com.apple.quarantine /Applications/Oblada.app
 - [Releases on GitHub](https://github.com/Oblada-Browser/oblada/releases): every version, with its DMG
 - [License](https://github.com/Oblada-Browser/oblada/blob/main/LICENSE)
 - [Zen Browser](https://zen-browser.app), whose design Oblada follows
+- [adblock-rust](https://github.com/brave/adblock-rust), Brave's engine the Barrier blocks trackers and ads with
